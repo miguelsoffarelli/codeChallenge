@@ -19,8 +19,7 @@ form.addEventListener('submit', function(e){
     'Content-type': 'application/json; charset=UTF-8',
   }
   })
-  .then(response => {
-    response.json()
-    console.log(response)}) 
-.catch(error => console.error('Error:', error)) 
-  });
+  .then(response => response.json())
+  .then(json => console.log("Success:", json)) 
+.catch(error => console.error('Error:', error)); 
+})
